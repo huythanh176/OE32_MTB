@@ -45,6 +45,14 @@ vi:
   users:
     title: Người dùng
     not_found: Không tìm thấy người dùng
+    edit:
+      title: Chỉnh sửa người dùng
+      btn_change: Thay đổi
+      permission_denied: Bạn không đủ quyền hạn
+    updated: Đã cập nhật thông tin
+    update:
+      title: Cập nhật thông tin của bạn
+      btn_save: Lưu thay đổi
     signin:
       title: Đăng nhập
       invalid: Email hoặc mật khẩu không hợp lệ
