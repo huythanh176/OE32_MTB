@@ -1,2 +1,17 @@
 vi:
-  title: Movie ticket booking
+  app_title: Movie ticket booking
+  static_pages:
+    home:
+      title: "Trang chủ"
+    about:
+      title: Giới thiệu
+      introduction: Đây là trang web để đặt vé xem phim
+    contact:
+      title: Liên hệ
+      introduction_html: Liên hệ tại <a href='https://www.cgv.vn'>đây</a>"
+    help:
+      title: Trợ giúp
+      introduction_html: "Liên hệ trợ giúp tại
+        <a href='https://www.cgv.vn'>đây</a>"
+  login:
+    title: Đăng nhập
