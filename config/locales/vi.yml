@@ -71,3 +71,11 @@ vi:
       title: Cài đặt
     profile:
       title: Hồ sơ
+  movies:
+    not_found: Không tìm thấy phim
+    showing: Phim đang chiếu
+    description: "Mô tả : %{description} "
+    time: "Thời lượng : %{time}"
+    booking: "Đặt vé"
+    details: Chi tiết phim
+

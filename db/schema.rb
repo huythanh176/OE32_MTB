@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20200224070048) do
     t.integer  "payment_id"
     t.integer  "schedule_id"
     t.integer  "promotion_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["payment_id"], name: "index_bookings_on_payment_id"
     t.index ["promotion_id"], name: "index_bookings_on_promotion_id"
     t.index ["schedule_id"], name: "index_bookings_on_schedule_id"

@@ -108,3 +108,24 @@ input {
   color: $state-danger-text;
   }
 }
+
+/* movie */
+.movie {
+  margin-top: 10px;
+  margin-right: 2em
+}
+
+/* movie_details */
+.movie_details {
+  display: flex;
+  div, h1, h3 , button {
+    margin-left: 20px;
+  }
+  button {
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    background: black;
+    color: white
+  }
+}

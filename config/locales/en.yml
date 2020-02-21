@@ -75,3 +75,10 @@ en:
       title: Settings
     profile:
       title: Profile
+  movies:
+    not_found: Movie not found
+    showing: Now Showing
+    description: "Description : %{description} "
+    time: "Time : %{time}"
+    booking: "Ticket Booking"
+    details: Details Movie
