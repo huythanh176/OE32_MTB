@@ -76,9 +76,15 @@ en:
     profile:
       title: Profile
   movies:
+    all: All Movie
     not_found: Movie not found
     showing: Now Showing
     description: "Description : %{description} "
     time: "Time : %{time}"
     booking: "Ticket Booking"
     details: Details Movie
+    create:
+      title: Movie
+      btn: Add Movie
+      success: "Movie creation succeed"
+      fail: Movie creation failed

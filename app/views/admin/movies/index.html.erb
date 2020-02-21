@@ -1,0 +1,8 @@
+<% provide(:title, t("movies.all")) %>
+<h1><%= t("movies.all") %></h1>
+
+<ul>
+  <%= render @movies %>
+</ul>
+
+<%= will_paginate %>

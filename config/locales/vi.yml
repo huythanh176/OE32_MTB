@@ -11,6 +11,11 @@ vi:
         male: Nam
         female: Nữ
         phone: Số điện thoại
+      movie:
+        name: Tên
+        description: Mô tả
+        time: Thời lượng
+        picture: Poster
   activerecord:
     errors:
       models:
@@ -45,14 +50,7 @@ vi:
   users:
     title: Người dùng
     not_found: Không tìm thấy người dùng
-    edit:
-      title: Chỉnh sửa người dùng
-      btn_change: Thay đổi
-      permission_denied: Bạn không đủ quyền hạn
-    updated: Đã cập nhật thông tin
-    update:
-      title: Cập nhật thông tin của bạn
-      btn_save: Lưu thay đổi
+    title: Nguoi dung
     signin:
       title: Đăng nhập
       invalid: Email hoặc mật khẩu không hợp lệ
@@ -61,6 +59,7 @@ vi:
     signup:
       header_title: Đăng kí
       btn_title: Đăng kí ngay!
+      success: Tạo tài khoản thành công
       fail: Tạo tài khoản không thành công
       errors:
         one : Đã xảy ra 1 lỗi
@@ -73,9 +72,20 @@ vi:
       title: Hồ sơ
   movies:
     not_found: Không tìm thấy phim
+    updated: Phim đã được cập nhật
+    deleted: Đã xóa phim
     showing: Phim đang chiếu
     description: "Mô tả : %{description} "
     time: "Thời lượng : %{time}"
     booking: "Đặt vé"
-    details: Chi tiết phim
-
+    create:
+      title: Phim
+      btn: Thêm phim
+      success: Thêm thành công
+      fail: Thêm không thành công
+    edit:
+      title: Sửa
+      btn: Cập nhật
+    delete:
+      title: Xóa
+      confirm: Bạn có chắc không ?
