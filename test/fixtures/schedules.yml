@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_at: 2020-02-21 16:19:35
+  end_at: 2020-02-21 16:19:35
+  movie: one
+  room: one
+
+two:
+  start_at: 2020-02-21 16:19:35
+  end_at: 2020-02-21 16:19:35
+  movie: two
+  room: two

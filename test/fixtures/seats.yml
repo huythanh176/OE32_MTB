@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seat_type: MyString
+  is_empty: false
+  room: one
+
+two:
+  seat_type: MyString
+  is_empty: false
+  room: two
