@@ -21,6 +21,16 @@
 
 en:
   app_title: Movie ticket booking
+  helpers:
+    label:
+      user:
+        name: "Name"
+        email: "Email"
+        password : "Password"
+        password_confirmation: "Confirmation"
+        male: Male
+        female: Female
+        phone: Phone
   static_pages:
     home:
       title: Home
@@ -34,5 +44,14 @@ en:
       title: Help
       introduction_html: "Get help on the Movie Ticket Booking at the
         <a href='https://www.cgv.vn'>here</a>"
-  login:
-    title: Log in
+  users:
+    login:
+      title: Log in
+    signup:
+      header_title: Sign Up
+      btn_title: Sign Up Now!
+      success: "Account creation succeed"
+      fail: Account creation failed
+      errors:
+        one : "The form contain one error"
+        other : "The form contain %{count} errors"

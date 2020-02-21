@@ -1,5 +1,34 @@
 vi:
   app_title: Movie ticket booking
+  helpers:
+    label:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+        password: "Mật khẩu"
+        male: Nam
+        female: Nữ
+        phone: Số điện thoại
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: Email không thể trống
+              invalid: Email không hợp lệ
+            name:
+              blank: Tên không thể trống
+              too_long: Tên quá dài
+            password:
+              blank: Mật khẩu không thể trống
+              too_short: Mật khẩu quá ngắn
+            password_confirmation:
+              confirmation: Không khớp với mật khẩu
+            phone:
+              blank: Số điện thoại không thể trống
   static_pages:
     home:
       title: "Trang chủ"
@@ -13,5 +42,13 @@ vi:
       title: Trợ giúp
       introduction_html: "Liên hệ trợ giúp tại
         <a href='https://www.cgv.vn'>đây</a>"
-  login:
-    title: Đăng nhập
+  users:
+    login:
+      title: Đăng nhập
+    signup:
+      header_title: Đăng kí
+      btn_title: Đăng kí ngay!
+      fail: Tạo tài khoản không thành công
+      errors:
+        one : Đã xảy ra 1 lỗi
+        other : "Đã xảy ra %{count} lỗi"

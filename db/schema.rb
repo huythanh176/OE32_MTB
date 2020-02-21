@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200221092519) do
+
+ActiveRecord::Schema.define(version: 20200224070048) do
 
   create_table "booking_details", force: :cascade do |t|
     t.integer  "booking_id"
@@ -113,6 +114,7 @@ ActiveRecord::Schema.define(version: 20200221092519) do
     t.boolean  "is_admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "password_digest"
   end
 
 end
