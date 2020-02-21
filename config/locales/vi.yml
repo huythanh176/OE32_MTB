@@ -43,8 +43,13 @@ vi:
       introduction_html: "Liên hệ trợ giúp tại
         <a href='https://www.cgv.vn'>đây</a>"
   users:
-    login:
+    title: Người dùng
+    not_found: Không tìm thấy người dùng
+    signin:
       title: Đăng nhập
+      invalid: Email hoặc mật khẩu không hợp lệ
+      new_user: "Người dùng mới? "
+      submit_btn: Xác nhận
     signup:
       header_title: Đăng kí
       btn_title: Đăng kí ngay!
@@ -52,3 +57,9 @@ vi:
       errors:
         one : Đã xảy ra 1 lỗi
         other : "Đã xảy ra %{count} lỗi"
+    logout:
+      title: Đăng xuất
+    settings:
+      title: Cài đặt
+    profile:
+      title: Hồ sơ
