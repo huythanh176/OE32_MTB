@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking_date: 2020-02-21 16:24:11
+  user: one
+  payment: one
+  schedule: one
+  promotion: one
+
+two:
+  booking_date: 2020-02-21 16:24:11
+  user: two
+  payment: two
+  schedule: two
+  promotion: two
