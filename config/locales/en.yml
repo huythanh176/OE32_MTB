@@ -20,5 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  title: Movie ticket booking
+  app_title: Movie ticket booking
+  static_pages:
+    home:
+      title: Home
+    about:
+      title: About
+      introduction: This is the website to book movie tickets
+    contact:
+      title: Contact
+      introduction_html: Please contact at <a href='https://www.cgv.vn'>here</a>
+    help:
+      title: Help
+      introduction_html: "Get help on the Movie Ticket Booking at the
+        <a href='https://www.cgv.vn'>here</a>"
+  login:
+    title: Log in
