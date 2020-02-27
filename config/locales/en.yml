@@ -45,8 +45,14 @@ en:
       introduction_html: "Get help on the Movie Ticket Booking at the
         <a href='https://www.cgv.vn'>here</a>"
   users:
-    login:
-      title: Log in
+    not_found: User not found
+    title: Users
+    signin:
+      title: Log In
+      invalid: Invalid email/password combination
+      new_user: "New user? "
+      email_not_found: Email address not found
+      submit_btn: Submit
     signup:
       header_title: Sign Up
       btn_title: Sign Up Now!
@@ -55,3 +61,9 @@ en:
       errors:
         one : "The form contain one error"
         other : "The form contain %{count} errors"
+    logout:
+      title: Log out
+    settings:
+      title: Settings
+    profile:
+      title: Profile
