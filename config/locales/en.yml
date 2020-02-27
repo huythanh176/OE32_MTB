@@ -47,6 +47,14 @@ en:
   users:
     not_found: User not found
     title: Users
+    updated: Profile updated
+    update:
+      title: Update your profile
+      btn_save: Save changes
+    edit:
+      title: Edit user
+      btn_change: Change
+      permission_denied: Permission Denied
     signin:
       title: Log In
       invalid: Invalid email/password combination

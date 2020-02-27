@@ -7,7 +7,8 @@ class User < ApplicationRecord
                     uniqueness: true
   validates :phone, presence: true
   validates :password, presence: true,
-                       length: {minimum: Settings.user.password.minimum}
+                       length: {minimum: Settings.user.password.minimum},
+                       allow_nil: true
   before_save :downcase_email
   has_secure_password
 
