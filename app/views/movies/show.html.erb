@@ -1,0 +1,12 @@
+<% provide :title, t("movies.details") %>
+
+<div class="movie_details">
+  <img src="<%= @movie.picture %>" width="200px" height="300px">
+  </img>
+  <div>
+    <h1><%= @movie.name %> </h1>
+    <h3><%= t("movies.description", description: @movie.description) %></h3>
+    <h3><%= t("movies.time", time: @movie.time) %></h3>
+    <button type="button"><%= t("movies.booking") %></button>
+  </div>
+</div>

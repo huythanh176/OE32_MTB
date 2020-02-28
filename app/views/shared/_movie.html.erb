@@ -1,0 +1,5 @@
+<h1><%= t "movies.showing" %></h1>
+
+<%  @movies.each do |m| %>
+  <%= link_to image_tag(m.picture, size: "240x339", class: "movie"), movie_path(m.id) %>
+<%  end %>

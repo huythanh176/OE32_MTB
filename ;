@@ -1,0 +1,26 @@
+show movies, details movie
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri Feb 21 16:29:12 2020 +0700
+#
+# On branch show_movie
+# Changes to be committed:
+#	modified:   Gemfile
+#	modified:   Gemfile.lock
+#	modified:   app/assets/stylesheets/custom.scss
+#	new file:   app/controllers/movies_controller.rb
+#	modified:   app/controllers/session_controller.rb
+#	modified:   app/controllers/static_pages_controller.rb
+#	new file:   app/helpers/movies_helper.rb
+#	modified:   app/models/movie.rb
+#	new file:   app/views/movies/show.html.erb
+#	new file:   app/views/shared/_movie.html.erb
+#	modified:   app/views/static_pages/home.html.erb
+#	modified:   config/locales/en.yml
+#	modified:   config/locales/vi.yml
+#	modified:   config/routes.rb
+#	modified:   db/schema.rb
+#	modified:   db/seeds.rb
+#
