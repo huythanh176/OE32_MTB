@@ -129,3 +129,13 @@ input {
     color: white
   }
 }
+
+.movies_manage {
+  display: inline-block;
+  div {
+    a {
+      margin-left: 20px;
+      margin-top : 10px
+    }
+  }
+}

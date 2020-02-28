@@ -78,6 +78,8 @@ en:
   movies:
     all: All Movie
     not_found: Movie not found
+    updated: Movie updated
+    deleted: Movie deleted
     showing: Now Showing
     description: "Description : %{description} "
     time: "Time : %{time}"
@@ -88,3 +90,10 @@ en:
       btn: Add Movie
       success: "Movie creation succeed"
       fail: Movie creation failed
+    edit:
+      title: Edit
+      btn: Update
+    delete:
+      title: Delete
+      confirm: Are you sure ?
+
