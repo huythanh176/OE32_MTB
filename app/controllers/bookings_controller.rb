@@ -11,24 +11,19 @@ class BookingsController < ApplicationController
   def create
     seats = params[:booking][:seats].split(",")
     ActiveRecord::Base.transaction do
-      @booking = Booking.create!(booking_params(@payment_id))
+      @booking = current_user.bookings.create!(booking_params)
       seats.each do |n|
         BookingDetail.create!(booking_id: @booking.id, seat_id: n.to_i)
       end
     end
     flash[:success] = t "booking.create.success"
-    redirect_to new_booking_path(id: params[:booking][:schedule_id])
+    redirect_to booking_details_path
   rescue ActiveRecord::RecordInvalid => exception
     flash[:danger] = exception.message
     redirect_to new_booking_path(id: params[:booking][:schedule_id])
   end
 
   private
-
-  def booking_params payment_id
-    params.require(:booking).permit :user_id, :schedule_id , :payment_id,
-                                    :promotion_id
-  end
 
   def load_schedule
     @schedule = Schedule.find_by id: params[:id]
@@ -48,5 +43,10 @@ class BookingsController < ApplicationController
     payment_id = Payment.find_by(payment_type: params[:booking][:payment_type]).id
     return if payment_id.nil?
     params[:booking][:payment_id] = payment_id
+  end
+
+  def booking_params
+    params.require(:booking).permit :schedule_id , :payment_id,
+                                    :promotion_id
   end
 end

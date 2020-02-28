@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @movies = Movie.sort.paginate page: params[:page], per_page: Settings.movie.home_paginate
+    @movies = Movie.sort_by_newest.paginate page: params[:page], per_page: Settings.movie.home_paginate
   end
 
   def help; end

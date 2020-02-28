@@ -101,3 +101,10 @@ vi:
       title: Đặt vé xem phim
       btn: Đặt vé
       success: Đặt vé thành công
+  booking_details:
+    title: Chi tiết đặt vé
+    movie_name: Tên phim
+    seat: Ghế
+    payment_method: Phương thức thanh toán
+    status: Trạng thái
+    user_name: Tên khách hàng

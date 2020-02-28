@@ -8,7 +8,8 @@ module SessionHelper
   end
 
   def logged_in?
-    current_user.present?
+    return current_user.present?
+    redirect_to signin_path
   end
 
   def log_out

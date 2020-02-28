@@ -107,3 +107,10 @@ en:
       title: Booking Movie Ticket
       btn: Booking
       success: Booking succced
+  booking_details:
+    title: Booking details
+    movie_name: Movie name
+    seat: Seat
+    payment_method: Payment method
+    status: Status
+    user_name: User name
