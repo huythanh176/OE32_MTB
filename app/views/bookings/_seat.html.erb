@@ -1,7 +1,8 @@
 <div class="seats_group">
-  <% @seats.each do |s| %>
-    <span id="<%= s.id %>">XX</span>
+  <% @seats_count.each do |s| %>
+    <span id="<%= s.id %>" class="<%= 'seated' if @seats_booked.include?(s.id) %>">XX</span>
   <% end %>
 </div>
 
 <%= javascript_include_tag "selected_seats" %>
+<%= javascript_include_tag "seats_booked" %>

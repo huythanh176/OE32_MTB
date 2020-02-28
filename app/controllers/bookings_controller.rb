@@ -1,11 +1,13 @@
 class BookingsController < ApplicationController
   before_action :load_schedule, only: :new
+  before_action :load_movie, only: :new
+  before_action :get_seats_booked, only: :new
   before_action :get_payment_id, only: :create
+  before_action :check_logged_in? , only: :new
 
   def new
-    load_movie(@schedule.movie_id)
+    @seats_count = Seat.get_seats_by_room(@schedule.room_id)
     @booking = current_user.bookings.new
-    @seats = Seat.get_seats_by_room(@schedule.room_id)
   end
 
   def create
@@ -32,8 +34,8 @@ class BookingsController < ApplicationController
     redirect_to root_url
   end
 
-  def load_movie schedule_id
-    @movie = Movie.find_by id: schedule_id
+  def load_movie
+    @movie = Movie.find_by id: @schedule.movie_id
     return if @movie
     flash[:danger]= t "movies.not_found"
     redirect_to root_url
@@ -48,5 +50,8 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit :schedule_id , :payment_id,
                                     :promotion_id
+
+  def get_seats_booked
+    @seats_booked = BookingDetail.get_seat_booked_by_schedule(params[:id])
   end
 end

@@ -15,3 +15,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require selected_seats
+//= require seats_booked
