@@ -1,0 +1,21 @@
+<%= form_for @booking do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, value: @movie.name, disabled: true ,class: "form-control" %>
+  <%= f.label :date %>
+  <%= f.text_field :date,value: @schedule.start_at, disabled: true , class: "form-control" %>
+  <%= f.label :email %>
+  <%= f.text_field :email, value: current_user.email, disabled: true , class: "form-control" %>
+  <%= f.label :phone %>
+  <%= f.text_field :phone,value: current_user.phone, disabled: true , class: "form-control" %>
+  <div class="gender">
+    <%= f.radio_button :payment_type, :counter, checked: true %>
+    <%= f.label :counter %>
+    <%= f.radio_button :payment_type, :paypal, checked: true %>
+    <%= f.label :paypal %>
+  </div>
+  <%= f.hidden_field :seats, value: nil , id: "selected_seats" %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :schedule_id, value: @schedule.id %>
+  <%= f.hidden_field :promotion_id, value: Settings.promotion %>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

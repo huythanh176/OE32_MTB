@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     resources :users, except: %i(destroy index)
     resources :movies, except: %i(edit index new)
     resources :theaters, only: %i(show index)
+    resources :bookings, only: %i(new create)
+    resources :seats, only: %i(create destroy new)
 
     namespace :admin do
       resources :movies, only: %i(edit new index)

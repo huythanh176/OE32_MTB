@@ -101,3 +101,8 @@ en:
     name: "Cinema name : %{name}"
     address: "Address : %{address}"
     title: Theaters
+  booking:
+    create:
+      title: Booking Movie Ticket
+      btn: Booking
+      success: Booking succced
