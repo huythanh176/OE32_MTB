@@ -10,12 +10,10 @@ Rails.application.routes.draw do
     post "/signin", to: "session#create"
     delete "/logout", to: "session#destroy"
     resources :users, except: %i(destroy index)
-    resources :movies, only: %i(show create)
+    resources :movies, except: %i(edit index new)
 
     namespace :admin do
-      get "/movie", to: "movies#new"
-      get "/movies", to: "movies#index"
-      resources :movies , only: %i(create show)
+      resources :movies, only: %i(edit index new)
     end
   end
 end
