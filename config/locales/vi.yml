@@ -89,4 +89,8 @@ vi:
     delete:
       title: Xóa
       confirm: Bạn có chắc không ?
-
+  theaters:
+    all: Danh sách các rạp
+    name: "Tên rạp : %{name}"
+    address: "Địa chỉ : %{address}"
+    title: Rạp

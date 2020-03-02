@@ -96,4 +96,8 @@ en:
     delete:
       title: Delete
       confirm: Are you sure ?
-
+  theaters:
+    all: All theater
+    name: "Cinema name : %{name}"
+    address: "Address : %{address}"
+    title: Theaters

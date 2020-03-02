@@ -6,6 +6,7 @@
         <li><%= link_to t("static_pages.home.title"), root_path %></li>
         <li><%= link_to t("static_pages.help.title"), help_path %></li>
         <li><%= link_to t("users.signup.header_title"), signup_path %></li>
+        <li><%= link_to t("theaters.title"), theaters_path %></li>
         <% if logged_in? %>
           <li><%= link_to t("users.title"), users_path %></li>
           <li class="dropdown">
@@ -22,7 +23,6 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to t("users.signup.header_title"), signup_path %></li>
           <li><%= link_to t("users.signin.title"), signin_path %></li>
         <% end %>
       </ul>

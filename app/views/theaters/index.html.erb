@@ -1,0 +1,16 @@
+<% provide(:title, t("theaters.title")) %>
+
+<div class="row">
+  <h1> <%= t "theaters.all" %> </h1>
+  <% if @theaters %>
+    <% @theaters.each do |t| %>
+      <div>
+        <h2><%= link_to t("theaters.name", name: t.name), theater_path(t.id) %> </h2>
+        <h3><%= t("theaters.address", address: t.address) %></h3>
+      </div>
+      <p>---------------------------------------</p>
+    <% end %>
+  <% else %>
+      <div><%= t("theaters.not_found") %>
+  <% end %>
+</div>

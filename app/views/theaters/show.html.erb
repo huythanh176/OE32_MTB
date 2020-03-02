@@ -1,0 +1,9 @@
+<% provide(:title, @theater.name) %>
+
+<div class="theater_details">
+  <img src="https://s3img.vcdn.vn/123phim/2019/12/dcine-ben-thanh-15759703947385.png" width="200px" />
+  <div>
+    <h1><%= t("theaters.name", name: @theater.name) %></h1>
+    <h1><%= t("theaters.address", address: @theater.address) %></h1>
+  </div>
+</div>
