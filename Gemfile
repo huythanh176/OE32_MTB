@@ -7,10 +7,11 @@ end
 
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass", "3.4.1"
+gem "carrierwave", "1.1.0"
 gem "will_paginate", "3.1.5"
 gem "bootstrap-will_paginate", "1.0.0"
 gem "config"
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem "faker", git: "https://github.com/faker-ruby/faker.git", branch: "master"
 gem "rails-i18n"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "rails", "~> 5.0.7", ">= 5.0.7.2"
