@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :theaters, only: %i(show index)
 
     namespace :admin do
-      resources :movies, only: %i(edit index new)
+      resources :movies, only: %i(edit new index)
     end
   end
 end

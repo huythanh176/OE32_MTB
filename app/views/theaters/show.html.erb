@@ -7,3 +7,25 @@
     <h1><%= t("theaters.address", address: @theater.address) %></h1>
   </div>
 </div>
+
+<div class="days">
+  <% 7.times do |n| %>
+    <h3>
+      <%= link_to n.days.from_now.strftime("%A"),
+          theater_path(start_at: "#{n.days.from_now.strftime(Settings.date.format)}%") %>
+    </h3>
+  <% end %>
+</div>
+
+<div class="schedules">
+  <% @movies.each do |m| %>
+    <div>
+      <span> <%= m[1] %> <span>
+      <% @schedules.each do |s| %>
+        <% if s.movie_id == m[0] && s.room.theater_id == @theater.id %>
+            <span class="schedules_time"><%= s.start_at.strftime("%H:%M") %><span>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

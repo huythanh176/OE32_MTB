@@ -5,7 +5,11 @@ class TheatersController < ApplicationController
     @theaters = Theater.sort.paginate page: params[:page]
   end
 
-  def show; end
+  def show
+    @movies= Movie.pluck(:id, :name)
+    @schedules = Schedule.get_schedule_by_day(params[:start_at].nil? == true ?
+                                  "#{Time.now.strftime(Settings.date.format)}%" : params[:start_at])
+  end
 
   private
 

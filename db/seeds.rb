@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-3.times do |n|
-  name = Faker::Company.name
-  address= Faker::Address.street_address
-  Theater.create!(name:  name,
-                address: address)
-end
+
+start_at = "2/3/2020 14:30"
+end_at = "2/3/2020 16:30"
+movie_id = 7
+room_id = 5
+Schedule.create!(start_at: start_at, end_at: end_at,
+                 movie_id: movie_id, room_id: room_id)
