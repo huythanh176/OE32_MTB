@@ -2,7 +2,7 @@ class Admin::MoviesController < ApplicationController
   before_action :find_movie, only: :edit
 
   def index
-    @movies = Movie.sort.paginate page: params[:page] , per_page: Settings.movie.admin_paginate
+    @movies = Movie.sort_by_newest.search_by_name("#{params[:search]}").paginate page: params[:page] , per_page: Settings.movie.admin_paginate
   end
 
   def new

@@ -71,6 +71,7 @@ vi:
     profile:
       title: Hồ sơ
   movies:
+    search: Tìm kiếm
     not_found: Không tìm thấy phim
     updated: Phim đã được cập nhật
     deleted: Đã xóa phim
