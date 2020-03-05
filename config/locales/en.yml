@@ -76,6 +76,7 @@ en:
     profile:
       title: Profile
   movies:
+    search: Search
     all: All Movie
     not_found: Movie not found
     updated: Movie updated

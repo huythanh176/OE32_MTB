@@ -1,7 +1,9 @@
 <% provide(:title, t("movies.all")) %>
+
 <h1><%= t("movies.all") %></h1>
 
-<ul>
+<%= render "search_form" %>
+<ul class="col-sm-12" >
   <%= render @movies %>
 </ul>
 
