@@ -10,5 +10,6 @@ start_at = "6/3/2020 16:30"
 end_at = "6/3/2020 18:30"
 movie_id = 2
 room_id = 2
+
 Schedule.create!(start_at: start_at, end_at: end_at,
                  movie_id: movie_id, room_id: room_id)

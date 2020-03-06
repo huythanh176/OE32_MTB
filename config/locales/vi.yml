@@ -77,6 +77,7 @@ vi:
     deleted: Đã xóa phim
     details: Chi tiết phim
     showing: Phim đang chiếu
+    comming: Phim sắp chiếu
     description: "Mô tả : %{description} "
     time: "Thời lượng : %{time}"
     booking: "Đặt vé"

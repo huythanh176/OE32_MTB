@@ -8,5 +8,12 @@
   <%= f.text_field :time, class: "form-control" %>
   <%= f.label :picture %>
   <%= f.file_field :picture, class: "form-control" %>
+  <div class="gender">
+    <%= f.collection_radio_buttons(
+      :status, Movie.statuses, :second, :first
+    ) do |b|
+      b.label { b.radio_button + b.text}
+    end %>
+  </div>
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
