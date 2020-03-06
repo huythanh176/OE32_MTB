@@ -1,0 +1,7 @@
+<div class="seats_group">
+  <% @seats.each do |s| %>
+    <span id="<%= s.id %>">XX</span>
+  <% end %>
+</div>
+
+<%= javascript_include_tag "selected_seats" %>

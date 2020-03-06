@@ -11,4 +11,4 @@ movie:
   admin_paginate: 16
 date:
   format: "%Y-%m-%d"
-
+promotion: 1

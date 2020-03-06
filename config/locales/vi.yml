@@ -75,6 +75,7 @@ vi:
     not_found: Không tìm thấy phim
     updated: Phim đã được cập nhật
     deleted: Đã xóa phim
+    details: Chi tiết phim
     showing: Phim đang chiếu
     description: "Mô tả : %{description} "
     time: "Thời lượng : %{time}"
@@ -95,3 +96,8 @@ vi:
     name: "Tên rạp : %{name}"
     address: "Địa chỉ : %{address}"
     title: Rạp
+  booking:
+    create:
+      title: Đặt vé xem phim
+      btn: Đặt vé
+      success: Đặt vé thành công

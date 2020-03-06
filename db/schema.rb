@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200224070048) do
+ActiveRecord::Schema.define(version: 20200305151002) do
 
   create_table "booking_details", force: :cascade do |t|
     t.integer  "booking_id"
@@ -56,8 +56,10 @@ ActiveRecord::Schema.define(version: 20200224070048) do
 
   create_table "payments", force: :cascade do |t|
     t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "name"
+    t.integer  "payment_type"
   end
 
   create_table "promotions", force: :cascade do |t|
@@ -110,9 +112,9 @@ ActiveRecord::Schema.define(version: 20200224070048) do
     t.string   "phone"
     t.string   "gender"
     t.datetime "birthday"
-    t.boolean  "is_admin", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "is_admin",        default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "password_digest"
   end
 
