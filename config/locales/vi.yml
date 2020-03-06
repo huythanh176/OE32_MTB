@@ -108,3 +108,16 @@ vi:
     payment_method: Phương thức thanh toán
     status: Trạng thái
     user_name: Tên khách hàng
+  comments:
+    title: Bình luận
+    not_found: Không tìm thấy bình luận
+    cant_delete: Không thể xóa bình luận
+    deleted: Đã xóa phim
+    create:
+      btn: Đăng
+      success: Đăng bình luận thành công
+      fail: Đăng bình luận thất bại
+      timestamp: "Đăng %{time} trước."
+    delete:
+      title: Xóa
+      confirm: Bạn có chắc ?

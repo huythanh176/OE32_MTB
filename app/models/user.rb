@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
+  has_many :comments, dependent: :destroy
   validates :name, presence: true, length: {maximum: Settings.user.name.maximum}
   validates :email, presence: true,
                     length: {maximum: Settings.user.email.maximum},

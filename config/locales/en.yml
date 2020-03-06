@@ -114,3 +114,16 @@ en:
     payment_method: Payment method
     status: Status
     user_name: User name
+  comments:
+    title: Comments
+    not_found: Comments not found
+    cant_delete: Comments can't delete
+    deleted: Deleted
+    create:
+      btn: Post
+      success: Comment creation succeed
+      fail: Comment creation failed
+      timestamp: "Posted %{time} ago."
+    delete:
+      title: Delete
+      confirm: Are you sure ?
