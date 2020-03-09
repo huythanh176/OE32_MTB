@@ -14,7 +14,6 @@
     <%= f.label :paypal %>
   </div>
   <%= f.hidden_field :seats, value: nil , id: "selected_seats" %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.hidden_field :schedule_id, value: @schedule.id %>
   <%= f.hidden_field :promotion_id, value: Settings.promotion %>
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>

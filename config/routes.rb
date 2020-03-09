@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :theaters, only: %i(show index)
     resources :bookings, only: %i(new create)
     resources :seats, only: %i(create destroy new)
+    resources :booking_details, only: :index
 
     namespace :admin do
       resources :movies, only: %i(edit new index)
