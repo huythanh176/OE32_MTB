@@ -12,6 +12,13 @@ module SessionHelper
     redirect_to signin_path
   end
 
+  def check_logged_in?
+    unless
+      current_user.present?
+      redirect_to signin_path
+    end
+  end
+
   def log_out
     session.delete :user_id
     @current_user = nil

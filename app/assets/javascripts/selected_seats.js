@@ -1,5 +1,6 @@
   var selected_seats = [];
   $('span').on('click', function(event) {
+    if($(this).hasClass('seated')) return;
     if($(this).hasClass('seat')) {
         $(this).removeClass('seat');
         $(this).css('background', '#3e515d');

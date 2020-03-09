@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-start_at = "4/3/2020 14:30"
-end_at = "4/3/2020 16:30"
-movie_id = 7
-room_id = 5
+start_at = "6/3/2020 16:30"
+end_at = "6/3/2020 18:30"
+movie_id = 2
+room_id = 2
 Schedule.create!(start_at: start_at, end_at: end_at,
                  movie_id: movie_id, room_id: room_id)
