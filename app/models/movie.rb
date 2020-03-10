@@ -6,6 +6,7 @@ class Movie < ApplicationRecord
   validates :time, presence: true
   validates :picture, presence: true
   scope :sort_by_newest, -> {order created_at: :desc}
-  scope :search_by_name, -> (name){where "name like ?", name}
+  scope :search_by_name, -> (name){where "name like ?", "%#{name}%"}
   mount_uploader :picture, PictureUploader
+  enum status: {is_showing: 0, is_comming: 1, ended: 2}
 end

@@ -1,5 +1,7 @@
 <h1><%= t "movies.showing" %></h1>
 
-<%  @movies.each do |m| %>
-  <%= link_to image_tag(m.picture, size: "240x339", class: "movie"), movie_path(m.id) %>
-<%  end %>
+<%= render "shared/movie_collection", object: @movies_is_showing %>
+
+<h1><%= t "movies.comming" %></h1>
+
+<%= render "shared/movie_collection", object: @movies_is_comming %>

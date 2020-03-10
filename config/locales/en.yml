@@ -82,6 +82,7 @@ en:
     updated: Movie updated
     deleted: Movie deleted
     showing: Now Showing
+    comming: Comming Soon
     description: "Description : %{description} "
     time: "Time : %{time}"
     booking: "Ticket Booking"

@@ -1,0 +1,3 @@
+<%  object.each do |m| %>
+  <%= link_to image_tag(m.picture, class: "movie"), movie_path(m.id) %>
+<% end %>

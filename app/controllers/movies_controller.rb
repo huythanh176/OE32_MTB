@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
     @movie = Movie.new movie_params
     if @movie.save
       flash[:info] = t "movies.create.success"
-      redirect_to admin_movie_path
+      redirect_to admin_movies_path
     else
       flash.now[:danger] = t "movies.create.fail"
       render :new
@@ -46,6 +46,7 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit :name, :description, :time, :picture
+    params[:movie][:status] = params[:movie][:status].to_i
+    params.require(:movie).permit :name, :description, :time, :picture, :status
   end
 end
