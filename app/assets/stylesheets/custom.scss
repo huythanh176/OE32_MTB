@@ -179,3 +179,31 @@ input {
 .ticket_items {
   margin-top: 10px
 }
+
+/* comment */
+.comments {
+  list-style: none;
+  padding: 0;
+
+  li {
+  padding: 10px 0;
+  border-top: 1px solid #e8e8e8;
+  }
+
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+    margin-left: 60px;
+  }
+
+  .content {
+    display: block;
+    margin-left: 60px;
+  }
+
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+}

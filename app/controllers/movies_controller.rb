@@ -1,7 +1,9 @@
 class MoviesController < ApplicationController
   before_action :find_movie, except: :create
 
-  def show; end
+  def show
+    @comments = @movie.comments.sort_by_newest
+  end
 
   def create
     @movie = Movie.new movie_params
