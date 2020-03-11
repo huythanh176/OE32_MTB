@@ -22,9 +22,10 @@
     <div>
       <span> <%= m[1] %> <span>
       <% @schedules.each do |s| %>
-        <% if s.movie_id == m[0] && s.room.theater_id == @theater.id %>
+        <% if s.movie_id == m[0] && s.room.theater_id == @theater.id &&
+                                  m[2] == Settings.movie.is_showing %>
             <span class="schedules_time">
-              <%= link_to s.start_at.strftime("%H:%M"), new_booking_path(id: s.id) %>
+              <%= link_to datetime_to_hours(s.start_at), new_booking_path(id: s.id) %>
             <span>
         <% end %>
       <% end %>

@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-sm-2"><%= n.schedule.movie.name %></div>
         <div class="col-sm-2"><%= current_user.name %></div>
-        <div class="col-sm-2"><%= n.schedule.start_at.strftime(Settings.datetime.format) %></div>
+        <div class="col-sm-2"><%= DateTime.parse(n.schedule.start_at).strftime(Settings.datetime.format) %></div>
         <div class="col-sm-1"><%= n.booking_details[i].seat_id %></div>
         <div class="col-sm-2"><%= n.payment.payment_type %></div>
       </div>

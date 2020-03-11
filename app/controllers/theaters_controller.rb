@@ -6,9 +6,9 @@ class TheatersController < ApplicationController
   end
 
   def show
-    @movies= Movie.pluck(:id, :name)
+    @movies = Movie.pluck(:id, :name, :status)
     @schedules = Schedule.get_schedule_by_day(params[:start_at].nil? == true ?
-                                  "#{Time.now.strftime(Settings.date.format)}%" : params[:start_at])
+                                  Time.now.strftime(Settings.date.format) : params[:start_at])
   end
 
   private

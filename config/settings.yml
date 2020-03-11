@@ -9,8 +9,11 @@ user:
 movie:
   home_paginate: 4
   admin_paginate: 16
+  is_showing: "is_showing"
 date:
-  format: "%Y-%m-%d"
+  format: "%d-%m-%Y"
 datetime:
   format: "%Y-%m-%d %H:%M"
 promotion: 1
+theater:
+  default: 1
