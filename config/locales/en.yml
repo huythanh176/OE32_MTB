@@ -46,8 +46,13 @@ en:
         <a href='https://www.cgv.vn'>here</a>"
   users:
     not_loggin: Please login
+    permission_denied: You do not have permission
     not_found: User not found
     title: Users
+    all : All Users
+    delete: Delete
+    deleted: User Deleted
+    cant_delete: User can't delete
     updated: Profile updated
     update:
       title: Update your profile

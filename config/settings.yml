@@ -5,7 +5,8 @@ user:
     maximum: 255
     valid: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
   password:
-    minimum: 6
+    minimum:
+  per_page: 20
 movie:
   home_paginate: 4
   admin_paginate: 16

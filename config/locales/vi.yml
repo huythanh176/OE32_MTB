@@ -48,8 +48,12 @@ vi:
       introduction_html: "Liên hệ trợ giúp tại
         <a href='https://www.cgv.vn'>đây</a>"
   users:
+    permission_denied: Bạn không đủ quyền truy cập
     title: Người dùng
     not_loggin: Hãy đăng nhập trước
+    deleted: Người dùng đã bị xóa
+    cant_delete: Không thể xóa người dùng
+    all : Tất cả người dùng
     not_found: Không tìm thấy người dùng
     title: Nguoi dung
     signin:

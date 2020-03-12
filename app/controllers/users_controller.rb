@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: %i(show edit update)
+  before_action :check_logged_in?, only: %i(edit update show)
+  before_action :find_user, except: %i(new create index)
 
   def show; end
 
