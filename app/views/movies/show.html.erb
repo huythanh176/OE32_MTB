@@ -7,7 +7,7 @@
     <h1><%= @movie.name %> </h1>
     <h3><%= t("movies.description", description: @movie.description) %></h3>
     <h3><%= t("movies.time", time: @movie.time) %></h3>
-    <button type="button"><%= t("movies.booking") %></button>
+    <button type="button"><%= link_to t("movies.booking"), schedules_path %></button>
   </div>
 </div>
 <h1><%= t "comments.title" %></h1>

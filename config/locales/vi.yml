@@ -49,6 +49,7 @@ vi:
         <a href='https://www.cgv.vn'>đây</a>"
   users:
     title: Người dùng
+    not_loggin: Hãy đăng nhập trước
     not_found: Không tìm thấy người dùng
     title: Nguoi dung
     signin:
@@ -77,7 +78,6 @@ vi:
     deleted: Đã xóa phim
     details: Chi tiết phim
     showing: Phim đang chiếu
-    comming: Phim sắp chiếu
     description: "Mô tả : %{description} "
     time: "Thời lượng : %{time}"
     booking: "Đặt vé"
@@ -103,7 +103,7 @@ vi:
       btn: Đặt vé
       success: Đặt vé thành công
   booking_details:
-    title: Chi tiết đặt vé
+    btn_title: Chi tiết đặt vé
     movie_name: Tên phim
     seat: Ghế
     payment_method: Phương thức thanh toán
@@ -122,3 +122,5 @@ vi:
     delete:
       title: Xóa
       confirm: Bạn có chắc ?
+  schedules:
+    title: Lịch chiếu

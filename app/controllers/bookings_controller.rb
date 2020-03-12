@@ -50,6 +50,7 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit :schedule_id , :payment_id,
                                     :promotion_id
+  end
 
   def get_seats_booked
     @seats_booked = BookingDetail.get_seat_booked_by_schedule(params[:id])

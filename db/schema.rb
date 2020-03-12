@@ -81,8 +81,8 @@ ActiveRecord::Schema.define(version: 20200309085414) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.datetime "start_at"
-    t.datetime "end_at"
+    t.string   "start_at"
+    t.string   "end_at"
     t.integer  "movie_id"
     t.integer  "room_id"
     t.datetime "created_at", null: false

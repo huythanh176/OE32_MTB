@@ -16,6 +16,7 @@ module SessionHelper
     unless
       current_user.present?
       redirect_to signin_path
+      flash[:danger] = t "users.not_loggin"
     end
   end
 

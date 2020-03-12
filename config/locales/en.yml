@@ -45,6 +45,7 @@ en:
       introduction_html: "Get help on the Movie Ticket Booking at the
         <a href='https://www.cgv.vn'>here</a>"
   users:
+    not_loggin: Please login
     not_found: User not found
     title: Users
     updated: Profile updated
@@ -128,3 +129,5 @@ en:
     delete:
       title: Delete
       confirm: Are you sure ?
+  schedules:
+    title: Schedules
