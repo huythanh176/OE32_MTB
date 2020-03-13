@@ -24,6 +24,12 @@ module SessionHelper
     user == current_user
   end
 
+  def check_is_admin
+    return if current_user.is_admin?
+    flash[:danger] = t "users.permission_denied"
+    redirect_to root_url
+  end
+
   def log_out
     session.delete :user_id
     @current_user = nil

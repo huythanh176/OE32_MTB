@@ -11,6 +11,7 @@ class User < ApplicationRecord
                        length: {minimum: Settings.user.password.minimum},
                        allow_nil: true
   before_save :downcase_email
+  scope :sort_by_newest, -> {order created_at: :desc}
   has_secure_password
 
   private

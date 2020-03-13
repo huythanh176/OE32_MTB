@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get "/signin", to: "session#new"
     post "/signin", to: "session#create"
     delete "/logout", to: "session#destroy"
-    resources :users, except: %i(destroy index)
+    resources :users, except: %i(index destroy)
     resources :movies, except: %i(edit index new)
     resources :theaters, only: %i(show index)
     resources :bookings, only: %i(new create)
@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resources :movies, only: %i(edit new index)
+      resources :users, only: :index
     end
   end
 end
