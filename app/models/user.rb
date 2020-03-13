@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :bookings, dependent: :destroy
+  has_many :bookings
   has_many :comments, dependent: :destroy
   validates :name, presence: true, length: {maximum: Settings.user.name.maximum}
   validates :email, presence: true,
@@ -13,6 +13,7 @@ class User < ApplicationRecord
   before_save :downcase_email
   scope :sort_by_newest, -> {order created_at: :desc}
   has_secure_password
+  acts_as_paranoid
 
   private
 

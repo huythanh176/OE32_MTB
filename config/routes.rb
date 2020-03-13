@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resources :movies, only: %i(edit new index)
-      resources :users, only: :index
+      resources :users, only: %i(index destroy)
     end
   end
 end
