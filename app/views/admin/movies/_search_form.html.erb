@@ -1,6 +1,6 @@
-<%= form_tag admin_movies_path, method: "get" do %>
+<%= search_form_for @q , url: admin_movies_path do |f| %>
   <div class="col-sm-2">
-    <%= text_field_tag :search, "", class:  "form-control" %>
-  </div>
-  <%= submit_tag t("movies.search"), class: "btn btn-primary" %>
+  <%= f.search_field :name_cont, class:  "form-control" %>
+    </div>
+  <%= f.submit t("movies.search"), class: "btn btn-primary" %>
 <% end %>

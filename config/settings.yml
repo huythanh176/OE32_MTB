@@ -12,7 +12,7 @@ movie:
   admin_paginate: 16
   is_showing: "is_showing"
 date:
-  format: "%d-%m-%Y"
+  format: "%-d-%-m-%y"
 datetime:
   format: "%Y-%m-%d %H:%M"
 promotion: 1

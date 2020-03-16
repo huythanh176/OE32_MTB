@@ -1,16 +1,17 @@
 <div class="container">
+  <h1>Today Schedule</h1>
   <div class="col-sm-2">
-    <h1><%= t("theaters.title") %></h1>
+    <h2><%= t("theaters.title") %></h2>
     <% @theaters.each do |t| %>
       <h3><%= link_to t[1], schedules_path(theater_id: t[0]) %></h3>
     <% end %>
   </div>
   <div class="col-sm-6">
-    <h1><%= t("schedules.title") %></h1>
+    <h2><%= t("schedules.title") %></h2>
     <% @movies.each do |m| %>
       <h3><%= m[1] %></h3>
       <% @schedules.each do |s| %>
-        <% if m[0] == s.movie_id && m[2] == Settings.movie.is_showing %>
+        <% if m[0] == s.movie_id && m[2] == Settings.movie.is_showing && Date.today <= Date.parse(s.start_at)  %>
           <span class="schedules_time">
             <%= link_to datetime_to_hours(s.start_at), new_booking_path(id: s.id) %>
           </span>

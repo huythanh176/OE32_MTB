@@ -17,7 +17,7 @@
 <% @comments.each do |c| %>
   <ul class="comments">
     <li class="col-sm-12">
-      <span class="user"><%= link_to c.user.name %></span>
+      <span class="user"><%= link_to c.user.name, c.user %></span>
       <span class="content"><%= c.content %></span>
       <span class="timestamp">
         <%= t("comments.create.timestamp", time: time_ago_in_words(c.created_at)) %>

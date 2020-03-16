@@ -1,0 +1,24 @@
+<% provide :title, t("theaters.title") %>
+
+<h1>Schedules</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2 bg-info">Movie</div>
+    <div class="col-sm-2 bg-info">Theater</div>
+    <div class="col-sm-2 bg-info">Room</div>
+    <div class="col-sm-3 bg-info">Time</div>
+  </div>
+</div>
+
+<% @schedules.each do |s| %>
+  <div class="container">
+    <div class="ticket_items">
+      <div class="row">
+        <div class="col-sm-2"><%= s.movie.name %></div>
+        <div class="col-sm-2"><%= s.room.theater.name %></div>
+        <div class="col-sm-2"><%= s.room.id %></div>
+        <div class="col-sm-3"><%= s.start_at %></div>
+      </div>
+    </div>
+  </div>
+<% end %>
