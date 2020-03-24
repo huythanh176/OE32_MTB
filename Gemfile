@@ -8,6 +8,7 @@ end
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass", "3.4.1"
 gem "ransack"
+gem "cancancan"
 gem "paranoia", "~> 2.2"
 gem "carrierwave", "1.1.0"
 gem "will_paginate", "3.1.5"

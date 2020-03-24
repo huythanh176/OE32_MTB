@@ -1,6 +1,6 @@
 class Admin::UsersController < ApplicationController
+  authorize_resource
   before_action :check_logged_in?, only: :index
-  before_action :check_is_admin, only: %i(destroy index)
   before_action :find_user, only: :destroy
 
   def index
