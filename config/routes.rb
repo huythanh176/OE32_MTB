@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
@@ -6,10 +7,8 @@ Rails.application.routes.draw do
     get "/about", to: "static_pages#about"
     get "/contact", to: "static_pages#contact"
     get "/signup", to: "users#new"
-    get "/signin", to: "session#new"
-    post "/signin", to: "session#create"
-    delete "/logout", to: "session#destroy"
-    resources :users, except: %i(index destroy)
+
+    resources :users, only: :show
     resources :movies, except: %i(edit index new)
     resources :theaters, only: %i(show index)
     resources :bookings, only: %i(new create)

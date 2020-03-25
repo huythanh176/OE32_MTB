@@ -6,35 +6,35 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-start_at = "19-03-2020 8:30"
-end_at = "16-03-2020 18:30"
-movie_id = 2
-room_id = 1
 
-Schedule.create!(start_at: start_at, end_at: end_at,
-                 movie_id: movie_id, room_id: room_id)
 
-start_at = "17-03-2020 10:30"
-end_at = "16-03-2020 18:30"
-movie_id = 2
-room_id = 2
+Theater.create!(name:"CGV", address: "123 Hung vuong")
+Theater.create!(name:"Galaxy", address: "456 Hung vuong")
+Theater.create!(name:"Lotte", address: "789 Hung vuong")
 
-Schedule.create!(start_at: start_at, end_at: end_at,
-                 movie_id: movie_id, room_id: room_id)
+3.times do |n|
+  3.times do |c|
+    Room.create!(theater_id: n + 1)
+  end
+end
 
-start_at = "16-03-2020 16:30"
-end_at = "16-03-2020 18:30"
-movie_id = 5
-room_id = 3
+9.times do |n|
+  40.times do |c|
+    Seat.create!(room_id: n + 1)
+  end
+end
 
-Schedule.create!(start_at: start_at, end_at: end_at,
-                 movie_id: movie_id, room_id: room_id)
+Payment.create!(payment_type: 0)
+Payment.create!(payment_type: 1)
 
-start_at = "21-03-2020 18:30"
-end_at = "16-03-2020 18:30"
-movie_id = 1
-room_id = 8
+Promotion.create!(content: "ZA")
 
-Schedule.create!(start_at: start_at, end_at: end_at,
-                 movie_id: movie_id, room_id: room_id)
+User.create(name:"admin",phone:"123123123",password:"zxczxc", email:"admin@admin.com", is_admin: true)
 
+# start_at = "24-03-2020 20:30"
+# end_at = "24-03-2020 18:30"
+# movie_id = 2
+# room_id = 1
+
+# Schedule.create!(start_at: start_at, end_at: end_at,
+#                  movie_id: movie_id, room_id: room_id)

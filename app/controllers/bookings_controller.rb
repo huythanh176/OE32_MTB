@@ -3,7 +3,6 @@ class BookingsController < ApplicationController
   before_action :load_movie, only: :new
   before_action :get_seats_booked, only: :new
   before_action :get_payment_id, only: :create
-  before_action :check_logged_in? , only: :new
 
   def new
     @seats_count = Seat.get_seats_by_room(@schedule.room_id)
