@@ -1,5 +1,4 @@
-class Admin::MoviesController < ApplicationController
-  before_action :check_is_admin
+class Admin::MoviesController < Admin
   before_action :find_movie, only: :edit
 
   def index
