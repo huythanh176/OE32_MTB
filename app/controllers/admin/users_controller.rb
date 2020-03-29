@@ -1,6 +1,4 @@
-class Admin::UsersController < ApplicationController
-  before_action :check_logged_in?, only: :index
-  before_action :check_is_admin, only: %i(destroy index)
+class Admin::UsersController < Admin
   before_action :find_user, only: :destroy
 
   def index
