@@ -1,6 +1,7 @@
 <div class="movies_manage">
   <%= link_to image_tag(movie.picture, size: "240x339", class: "movie"), movie_path(movie.id) %>
   <div>
+  <div class="movie_name"><%= movie.name %></div>
     <%= link_to t("movies.edit.title"), edit_admin_movie_path(movie.id), class: "btn btn-lg btn-primary" %>
     <%= link_to t("movies.delete.title"), movie, method: :delete,  class: "btn btn-lg btn-danger",
                                          data: { confirm: t("movies.delete.confirm") } %>

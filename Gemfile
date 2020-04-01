@@ -7,9 +7,13 @@ end
 
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass", "3.4.1"
+gem 'dotenv-rails'
 gem "ransack"
 gem "cancancan"
 gem "devise", "~> 4.1"
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem "omniauth-facebook"
 gem "carrierwave", "1.1.0"
 gem "will_paginate", "3.1.5"
 gem "bootstrap-will_paginate", "1.0.0"

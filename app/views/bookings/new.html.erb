@@ -1,7 +1,7 @@
 <% provide :title, t("booking.create.title") %>
 <% provide :button_text, t("booking.create.btn") %>
 
-<% if logged_in? %>
+<% if user_signed_in? %>
   <h1><%= t "movies.create.title" %></h1>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">

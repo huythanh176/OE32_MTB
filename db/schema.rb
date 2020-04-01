@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200329065247) do
+ActiveRecord::Schema.define(version: 20200331050126) do
 
   create_table "booking_details", force: :cascade do |t|
     t.integer  "booking_id"
@@ -126,6 +126,8 @@ ActiveRecord::Schema.define(version: 20200329065247) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.string   "provider"
+    t.string   "uid"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
