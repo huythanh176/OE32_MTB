@@ -11,6 +11,7 @@ movie:
   home_paginate: 4
   admin_paginate: 16
   is_showing: "is_showing"
+  is_ccc: "is_CCC"
 date:
   format: "%-d-%-m-%y"
 datetime:

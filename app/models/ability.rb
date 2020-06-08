@@ -7,7 +7,7 @@ class Ability
     cannot :manage, [Movie, Schedule, User, BookingDetail]
 
     if user.present?
-      can :manage, [Movie, Schedule, User, BookingDetail]
+      cannot :manage, [Movie, Schedule, User, BookingDetail]
 
       if user.is_admin?
         can :manage, [Movie, Schedule, User, BookingDetail]

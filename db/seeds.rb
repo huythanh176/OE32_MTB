@@ -24,9 +24,6 @@ end
   end
 end
 
-Payment.create!(payment_type: 0)
-Payment.create!(payment_type: 1)
-
 Promotion.create!(content: "ZA")
 
 User.create(name:"admin",phone:"123123123",password:"zxczxc", email:"admin@admin.com", is_admin: true)

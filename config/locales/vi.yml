@@ -16,6 +16,8 @@ vi:
         description: Mô tả
         time: Thời lượng
         picture: Poster
+        statuses:
+          is_comming: Đang chiếu
   activerecord:
     errors:
       models:
@@ -32,6 +34,8 @@ vi:
               too_short: Mật khẩu quá ngắn
             password_confirmation:
               confirmation: Không khớp với mật khẩu
+            current_password:
+              blank: Mật khẩu hiện tại không được để trống
             phone:
               blank: Số điện thoại không thể trống
   static_pages:
@@ -128,3 +132,6 @@ vi:
       confirm: Bạn có chắc ?
   schedules:
     title: Lịch chiếu
+  Settings:
+    movie:
+      is_CCC: dasdas

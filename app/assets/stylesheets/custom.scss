@@ -171,10 +171,18 @@ input {
 }
 
 .seats_group {
-  span {
+  display:flex;
+    flex-wrap: wrap;
+
+  div {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
     font-size: 32px;
-    background: #3e515d;
+    background: #949494;
     margin-left: 20px;
+    width:60px;
+    height:50px;
   }
 }
 

@@ -1,30 +1,34 @@
-<% provide :title, t("booking_details.title") %>
+<% provide :title, "Vé đã đặt" %>
 
-<h1><%= t("booking_details.title") %></h1>
+<h1><%= "Vé đã đặt" %></h1>
 <div class="container">
   <div class="row">
     <div class="col-sm-2 bg-info"><%= t("booking_details.movie_name") %></div>
     <div class="col-sm-2 bg-info"><%= t("booking_details.user_name") %></div>
-    <div class="col-sm-2 bg-info"><%= t("booking_details.time") %></div>
+    <div class="col-sm-2 bg-info"><%= "Thời gian chiếu" %></div>
     <div class="col-sm-1 bg-info"><%= t("booking_details.seat") %></div>
-    <div class="col-sm-2 bg-info"><%= t("booking_details.payment_method") %></div>
+    <div class="col-sm-2 bg-info"><%= "Số lượng" %></div>
+    <div class="col-sm-2 bg-info"><%= "Thành tiền" %></div>
   </div>
 </div>
 
 <% @bookings.each do |n| %>
-  <% n.booking_details.each do |b| %>
   <div class="container">
     <div class="ticket_items">
       <div class="row">
         <div class="col-sm-2"><%= n.schedule.movie.name %></div>
         <div class="col-sm-2"><%= current_user.name %></div>
         <div class="col-sm-2"><%= DateTime.parse(n.schedule.start_at).strftime(Settings.datetime.format) %></div>
-        <div class="col-sm-1"><%= b.seat_id %></div>
-        <div class="col-sm-2"><%= n.payment.payment_type %></div>
+        <div class="col-sm-1">
+          <% n.booking_details.each do |b| %>
+            <%= "#{b.seat_id}"%>
+          <% end %>
+        </div>
+        <div class="col-sm-2"><%= n.booking_details.size %></div>
+        <div class="col-sm-2"><%= n.booking_details.size * 45000 %></div>
       </div>
    </div>
   </div>
-  <% end %>
 <% end %>
 
 <%= will_paginate @bookings %>

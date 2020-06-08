@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
   devise_for :users,
               path: '',
               path_names: {sign_in: 'login' ,sign_out: 'logout' ,edit: 'profile',sign_up: 'resgistration'},
               controllers: {omniauth_callbacks: 'omniauth_callbacks' }
+  default_url_options host: "localhost:3000"
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
@@ -10,6 +13,8 @@ Rails.application.routes.draw do
     get "/about", to: "static_pages#about"
     get "/contact", to: "static_pages#contact"
     get "/signup", to: "users#new"
+    get "/dashboard", to: "dashboard#index"
+    post "/hook" => "booking#hook"
 
     resources :users, only: :show
     resources :movies, except: %i(edit index new)
@@ -17,6 +22,7 @@ Rails.application.routes.draw do
     resources :bookings, only: %i(new create)
     resources :seats, only: %i(create destroy new)
     resources :booking_details, only: :index
+
     resources :schedules, only: %i(index create update)
     resources :movies, except: %i(edit index new) do
       resources :comments, only: %i(create destroy)
