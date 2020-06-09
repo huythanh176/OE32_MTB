@@ -1,7 +1,7 @@
   <li>
     <%= link_to user.name, user %> |
-    <% if current_user.is_admin? && !current_user?(user) %>
-      <%= link_to t("users.delete"), user, method: :delete,
+    <% if current_user.is_admin? %>
+      <%= link_to t("users.delete"), admin_user_path(user), method: :delete,
                                             data: {confirm: t("movies.delete.confirm")} %>
     <% end %>
   </li>

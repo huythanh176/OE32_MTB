@@ -1,24 +1,79 @@
-<div class="container">
-  <div class="col-sm-2">
-    <h1><%= t("theaters.title") %></h1>
+<div class="container lc">
+  <h1>Lịch chiếu hôm nay</h1>
+  <div class="col-sm-2 theater">
+    <h2><%= t("theaters.title") %></h2>
     <% @theaters.each do |t| %>
-      <h3><%= link_to t[1], schedules_path(theater_id: t[0]) %></h3>
+      <h3 class="t"><%= link_to t[1], schedules_path(theater_id: t[0]) %></h3>
     <% end %>
   </div>
-  <div class="col-sm-6">
-    <h1><%= t("schedules.title") %></h1>
+  <div class="col-sm-6 movi">
+    <h2><%= t("schedules.title") %></h2>
     <% @movies.each do |m| %>
-      <h3><%= m[1] %></h3>
-      <% @schedules.each do |s| %>
-        <% if m[0] == s.movie_id && m[2] == Settings.movie.is_showing %>
-          <span class="schedules_time">
-            <%= link_to datetime_to_hours(s.start_at), new_booking_path(id: s.id) %>
-          </span>
+      <div class="item-m">
+        <img src="<%= m.picture %>"/>
+        <div class="bao">
+        <h3 class="mt"><%= m.name %></h3>
+        <% @schedules.each do |s| %>
+          <% if (m.id == s.movie_id) && (m.status == Settings.movie.is_showing) && (Time.now < DateTime.parse(s.start_at)) %>
+            <span class="schedules_time">
+              <%= link_to datetime_to_hours(s.start_at), new_booking_path(id: s.id), class: "holo" %>
+            </span>
+          <% end %>
         <% end %>
+                </div>
+
+          </div>
+
       <% end %>
-    <% end %>
   </div>
 </div>
+
+<style type="text/css">
+  .holo {
+      color: red;
+      font-size: 25px;
+  }
+  .bao {
+    width:100%;
+  }
+  .item-m {
+    display: flex;
+    margin-top: 5%;
+  }
+  .mt {
+    margin-left: 8%;
+  }
+  img {
+    width: 200px;
+    height: 250px;
+  }
+  .t {
+    background: orange;
+    text-align: center;
+  }
+  h1 {
+    color:white;
+  }
+  .lc {
+        background-color: #6d695c;
+    background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1),
+  rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+  repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+  linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+  linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));   background-size: 70px 120px;
+
+  }
+  .theater {
+    color:white;
+    border: 1px solid black;
+  }
+  .movi {
+    color: white;
+    border: 1px solid black;
+    margin-left: 10%;
+    padding-bottom: 3%;
+  }
+</style>
 
 
 

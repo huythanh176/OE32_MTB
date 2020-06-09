@@ -1,3 +1,3 @@
-class Admin < ApplicationController
+class Admin::AdminController < ApplicationController
   authorize_resource
 end

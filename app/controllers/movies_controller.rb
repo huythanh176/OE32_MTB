@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :check_logged_in?
+  before_action :authenticate_user!
   before_action :find_movie, except: :create
 
   def show

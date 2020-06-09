@@ -11,3 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w(selected_seats.js)
 Rails.application.config.assets.precompile += %w(seats_booked.js)
+Rails.application.config.assets.precompile += %w( login.css )

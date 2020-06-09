@@ -2,8 +2,18 @@ class BookingsController < ApplicationController
   before_action :load_schedule, only: :new
   before_action :load_movie, only: :new
   before_action :get_seats_booked, only: :new
-  before_action :get_payment_id, only: :create
-  before_action :check_logged_in? , only: :new
+
+  protect_from_forgery except: [:hook]
+
+  def hook
+    params.permit!
+    status = params[:payment_status]
+    if status == "Completed"
+      @booking = Booking.find params[:invoice]
+      @booking.update_attributes notification_params: params, status: status, transaction_id: params[:txn_id], purchased_at: Time.now
+    end
+    render nothing: true
+  end
 
   def new
     @seats_count = Seat.get_seats_by_room(@schedule.room_id)
@@ -19,7 +29,11 @@ class BookingsController < ApplicationController
       end
     end
     flash[:success] = t "booking.create.success"
-    redirect_to booking_details_path
+    if params[:booking][:payment_type] == "counter"
+      redirect_to booking_details_path
+    else
+      redirect_to @booking.paypal_url(booking_details_path,seats.length)
+    end
   rescue ActiveRecord::RecordInvalid => exception
     flash[:danger] = exception.message
     redirect_to new_booking_path(id: params[:booking][:schedule_id])
@@ -41,14 +55,8 @@ class BookingsController < ApplicationController
     redirect_to root_url
   end
 
-  def get_payment_id
-    payment_id = Payment.find_by(payment_type: params[:booking][:payment_type]).id
-    return if payment_id.nil?
-    params[:booking][:payment_id] = payment_id
-  end
-
   def booking_params
-    params.require(:booking).permit :schedule_id , :payment_id,
+    params.require(:booking).permit :schedule_id , :payment_type,
                                     :promotion_id
   end
 

@@ -1,14 +1,83 @@
 <% provide :title, t("booking.create.title") %>
 <% provide :button_text, t("booking.create.btn") %>
 
-<% if logged_in? %>
-  <h1><%= t "movies.create.title" %></h1>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <%= render "seat" %>
+<% if user_signed_in? %>
+  <div class="s">
+    <h1><%= "Đặt vé xem phim" %></h1>
+    <div class="row">
+      <h2>Màn hình đặt vé của rạp</h2>
+      <div class="container1">
+        <div class="col-md-6 col-md-offset-3 damseat">
+          <div class="screen">Màn hình</div>
+          <%= render "seat" %>
+          <div class="tinhtien">
+            <span>Tổng tiền:</span>
+            <span class="gia">0 VND</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3 damtt">
+          <%= render "form" %>
+        </div>
+      </div>
     </div>
-    <div class="col-md-6 col-md-offset-3">
-      <%= render "form" %>
-    </div>
-  </div>
+</div>
 <% end %>
+<script type="text/javascript">
+</script>
+
+<style type="text/css">
+  .tinhtien {
+    margin-left: 4%;
+    margin-top: 7%;
+  }
+  .screen {
+    text-align: center;
+    background: orange;
+    margin-left: 4%;
+    width: 89%;
+    height: 20%;
+    font-size: 20px;
+    padding-top: 5%;
+  }
+  h2 {
+    margin-left: 30%;
+  }
+  h1 {
+    margin-left: 37%;
+    color: white;
+  }
+  .s {
+    background-color: #6d695c;
+    background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1),
+  rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+  repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+  linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+  linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));   background-size: 70px 120px;
+    width: 72em;
+    height: 60em;
+
+  }
+  .row {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.88);
+    width: 500px;
+    margin-top: 84px;
+    margin-left: 50px;
+    width: 900px;
+    height: 600px;
+  }
+  .container1 {
+    margin-top: 5%;
+    display: flex;
+  }
+  .damseat {
+    margin-left: 0;
+    width: 500px;
+  }
+  .damtt {
+    margin-left: 0;
+    width: 40%;
+    border-left: 1px solid black;
+  }
+
+</style>

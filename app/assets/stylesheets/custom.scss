@@ -171,10 +171,19 @@ input {
 }
 
 .seats_group {
-  span {
-    font-size: 32px;
-    background: #3e515d;
+  display:flex;
+    flex-wrap: wrap;
+
+  div {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 13px;
+    background: #949494;
     margin-left: 20px;
+    width:29px;
+    height:29px;
+    border-radius: 20%;
   }
 }
 
@@ -219,4 +228,9 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+.movie_name {
+  text-align: center;
+  font-size:20px;
 }

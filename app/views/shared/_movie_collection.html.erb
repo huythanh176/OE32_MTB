@@ -1,3 +1,7 @@
+
 <%  object.each do |m| %>
-  <%= link_to image_tag(m.picture, class: "movie"), movie_path(m.id) %>
+  <div class="movies_manage">
+    <%= link_to image_tag(m.picture, class: "movie"), movie_path(m.id) %>
+    <div class="movie_name"><%= m.name %></div>
+</div>
 <% end %>

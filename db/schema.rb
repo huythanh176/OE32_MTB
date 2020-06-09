@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200309085414) do
+ActiveRecord::Schema.define(version: 20200609093318) do
 
   create_table "booking_details", force: :cascade do |t|
     t.integer  "booking_id"
@@ -24,12 +24,15 @@ ActiveRecord::Schema.define(version: 20200309085414) do
   create_table "bookings", force: :cascade do |t|
     t.datetime "booking_date"
     t.integer  "user_id"
-    t.integer  "payment_id"
     t.integer  "schedule_id"
     t.integer  "promotion_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["payment_id"], name: "index_bookings_on_payment_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "payment_type"
+    t.text     "notification_params"
+    t.string   "status"
+    t.string   "transaction_id"
+    t.datetime "purchased_at"
     t.index ["promotion_id"], name: "index_bookings_on_promotion_id"
     t.index ["schedule_id"], name: "index_bookings_on_schedule_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
@@ -55,13 +58,6 @@ ActiveRecord::Schema.define(version: 20200309085414) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "status"
-  end
-
-  create_table "payments", force: :cascade do |t|
-    t.string   "type"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "payment_type"
   end
 
   create_table "promotions", force: :cascade do |t|
@@ -109,15 +105,29 @@ ActiveRecord::Schema.define(version: 20200309085414) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "email"
     t.string   "password"
     t.string   "phone"
     t.string   "gender"
     t.datetime "birthday"
-    t.boolean  "is_admin",        default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "password_digest"
+    t.boolean  "is_admin",               default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.datetime "deleted_at"
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.string   "provider"
+    t.string   "uid"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["deleted_at"], name: "index_users_on_deleted_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

@@ -1,15 +1,13 @@
 <%= form_for @booking do |f| %>
-  <%= f.label :name %>
+  <%= f.label "Tên phim" %>
   <%= f.text_field :name, value: @movie.name, disabled: true ,class: "form-control" %>
-  <%= f.label :date %>
+  <%= f.label "Lịch chiếu" %>
   <%= f.text_field :date,value: @schedule.start_at, disabled: true , class: "form-control" %>
   <%= f.label :email %>
   <%= f.text_field :email, value: current_user.email, disabled: true , class: "form-control" %>
-  <%= f.label :phone %>
+  <%= f.label "Số điện thoại" %>
   <%= f.text_field :phone,value: current_user.phone, disabled: true , class: "form-control" %>
   <div class="gender">
-    <%= f.radio_button :payment_type, :counter, checked: true %>
-    <%= f.label :counter %>
     <%= f.radio_button :payment_type, :paypal, checked: true %>
     <%= f.label :paypal %>
   </div>

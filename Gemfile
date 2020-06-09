@@ -7,6 +7,14 @@ end
 
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass", "3.4.1"
+gem 'dotenv-rails'
+gem "ransack"
+gem "cancancan"
+gem "devise", "~> 4.1"
+gem "omniauth"
+gem 'activemerchant'
+gem "omniauth-google-oauth2"
+gem "omniauth-facebook"
 gem "carrierwave", "1.1.0"
 gem "will_paginate", "3.1.5"
 gem "cancancan"
@@ -44,6 +52,10 @@ gem "jbuilder", "~> 2.5"
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug", platform: :mri
+  gem "rspec-rails", "~> 3.7"
+  gem "factory_bot_rails"
+  gem "rails-controller-testing"
+  gem "shoulda-matchers", github: "thoughtbot/shoulda-matchers"
   gem "sqlite3", git: "https://github.com/larskanis/sqlite3-ruby",
   branch: "add-gemspec"
 end

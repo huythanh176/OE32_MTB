@@ -1,0 +1,15 @@
+<%= form_for @schedule do |f| %>
+  <%= f.label :start_at %>
+  <div>
+    <%= f.datetime_select :start_at, {order: [:day, :month, :year, :hour, :minute], start_year: Date.today.year, use_two_digit_numbers: true} %>
+  </div>
+  <%= f.label :movie_id, "Movie" %>
+  <div>
+    <%= f.collection_select(:movie_id, Movie.all, :id, :name) %>
+  </div>
+  <%= f.label :room_id, "Room" %>
+  <div>
+    <%= f.collection_select(:room_id, Room.all, :id, :id) %>
+  </div>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
